@@ -26,13 +26,13 @@ onion : 81<br>
 Indian market : 81<br>
 
 ---
-## Workflow
+## Brief workflow
 
-In this project, we start by splitting the training data into training and validation data (since validation data is not explicitely present), followed by exploratory data analysis to understand more about the images we are working with.<br>
-Post this we start the pre-modelling process by building some utility functions to evaluate the performance of our model, building data pipelines and hyperparameter tuning pipeline.<br>
-In the modelling phase, we tried various architectures of CNN including Custom CNN from scratch (both with low and high complexity), pretrained models like VGG-16, Resnet-50 and MobileNetV3Small which were fine-tune by training the fully connected layers, with proper callbacks in place.<br>
-All the models were hyperparamater tuned using [Optuna](https://optuna.org/), in addition to deriving the hyperparameter importance. The best model was compared for each instance. <br>
-Hyperparameters: batch size, dropout rate, regularization type, regularization alpha and image augmentation.<br>
+- In this project, we start by splitting the training data into training and validation data (since validation data is not explicitely present), followed by exploratory data analysis to understand more about the images we are working with.<br>
+- Post this we start the pre-modelling process by building some utility functions to evaluate the performance of our model, building data pipelines and hyperparameter tuning pipeline.<br>
+- In the modelling phase, we tried various architectures of CNN including Custom CNN from scratch (both with low and high complexity), pretrained models like VGG-16, Resnet-50 and MobileNetV3Small which were fine-tune by training the fully connected layers, with proper callbacks in place.<br>
+- All the models were hyperparamater tuned using [Optuna](https://optuna.org/), in addition to deriving the hyperparameter importance. The best model was compared for each instance. <br>
+- Hyperparameters: batch size, dropout rate, regularization type, regularization alpha and image augmentation.<br>
 
 The best performing model was fine-tuned VGG-16 with train accuracy = 98.12%, val accuracy = 95.85%, test accuracy = 90.88%, train loss = 0.052, val loss = 0.171, test loss = 0.21.<br>
 
